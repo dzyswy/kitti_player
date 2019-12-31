@@ -26,7 +26,9 @@ public:
 	 * @param      first_index  起始序号
 	 */
     FormattedFilename(const std::string &path, const std::string &name_fmt, const std::string &suffix, int first_index = 0);
-    /**
+    FormattedFilename(const std::string &path, const std::string &subpath, const std::string &name_fmt, const std::string &suffix, int first_index = 0);
+    
+	/**
 	* @brief	返回第index个格式化文件名
 	*
 	* @param	index	[index] 	序号

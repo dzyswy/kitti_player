@@ -1,22 +1,10 @@
+syntax = "proto2";
+
+package kitti;
 
 
 
 
-
-
-
-
-
-
-
-message NodeParameter {
-    optional string name = 1; // the node name
-    optional string type = 2; // the node type
-    optional string dataset_root_path = 3; // kitti dataset root path
-    optional string frame_id = 5; // ros msgs frame_id
-    optional bool original_timestamp = 6;
-    optional string topic = 7;
-}
 
 message PlayerParameter {
     optional string name = 1;
@@ -29,5 +17,21 @@ message PlayerParameter {
     repeated NodeParameter node = 100;
 }
 
+message NodeParameter {
+    optional string name = 1; // the node name
+    optional string type = 2; // the node type
+    optional string dataset_root_path = 3; // kitti dataset root path
+    optional string subset_path = 8; // kitti subset path, like image_00
+    optional string suffix = 9; // kitti raw data suffix
+    optional string frame_id = 5; // ros msgs frame_id
+    optional bool original_timestamp = 6;
+    optional string topic = 7;
+    optional ImageSpecParameter image_spec_param = 100;
+}
 
+message ImageSpecParameter {
+    optional string encoding  = 1; // passthrough rgb8 rgba8 bgr8 bgra8 mono8 mono16
+
+
+}
 

@@ -28,8 +28,9 @@ find_package(catkin REQUIRED COMPONENTS
                     dynamic_reconfigure
 )
 
-SET(PCL_DIR /opt/src/pcl/libpcl-1.8.1-x86/share/pcl-1.8/)
-find_package(PCL 1.8 REQUIRED)
+#SET(PCL_DIR /opt/src/pcl/libpcl-1.8.1-x86/share/pcl-1.8/)
+#find_package(PCL 1.8 REQUIRED)
+find_package(PCL REQUIRED)
 find_package(Boost REQUIRED COMPONENTS thread system program_options)
 find_package(OpenCV REQUIRED)
 find_package(Glog REQUIRED)

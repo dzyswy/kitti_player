@@ -17,6 +17,13 @@ FormattedFilename::FormattedFilename(const std::string &path, const std::string 
 
 }
 
+FormattedFilename::FormattedFilename(const std::string &path, const std::string &subpath, const std::string &name_fmt, const std::string &suffix, int first_index = 0)
+{
+	name_format_ = path + subpath + name_fmt;
+    suffix_ = suffix;
+    first_index_ = first_index;
+}   
+
 
 std::string FormattedFilename::get_filename(int index)
 {

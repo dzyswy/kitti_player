@@ -1,0 +1,51 @@
+name: "velodyne_only"
+dataset_root_path: "/work/picture/dataset/kitti/2011_09_26/2011_09_26_drive_0009_sync"
+frame_id: "odom"
+original_timestamp: true
+frequency: 0.1
+loop: true
+node {
+    name: "velodyne_node"
+    type: "Velodyne"
+    topic: "/velodyne_points"
+}
+node {
+    name: "image_00"
+    type: "Image"
+    subset_path: "/image_00"
+    suffix: ".png"
+    topic: "/left_gray"
+    image_spec_param {
+        encoding: "mono8"
+    }
+}
+node {
+    name: "image_01"
+    type: "Image"
+    subset_path: "/image_01"
+    suffix: ".png"
+    topic: "/right_gray"
+    image_spec_param {
+        encoding: "mono8"
+    }
+}
+node {
+    name: "image_02"
+    type: "Image"
+    subset_path: "/image_02"
+    suffix: ".png"
+    topic: "/left_color"
+    image_spec_param {
+        encoding: "rgb8"
+    }
+}
+node {
+    name: "image_03"
+    type: "Image"
+    subset_path: "/image_03"
+    suffix: ".png"
+    topic: "/right_color"
+    image_spec_param {
+        encoding: "rgb8"
+    }
+}

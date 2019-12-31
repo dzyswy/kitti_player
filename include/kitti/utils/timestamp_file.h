@@ -24,6 +24,7 @@ public:
 	 */
 	TimestampFile(const std::string &filename);
 	TimestampFile(const std::string &path, const std::string &filename);
+	TimestampFile(const std::string &path, const std::string &subpath, const std::string &filename);
 	///@brief 判断是否打开成功
 	bool is_open();
 	///@brief 返回时戳总数

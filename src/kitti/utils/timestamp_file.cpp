@@ -17,6 +17,12 @@ TimestampFile::TimestampFile(const std::string &path, const std::string &filenam
 	is_open_ = parse_file(fullname);
 }
 
+TimestampFile::TimestampFile(const std::string &path, const std::string &subpath, const std::string &filename)
+{
+	string fullname = path + subpath + filename;
+	is_open_ = parse_file(fullname);
+}
+
 bool TimestampFile::is_open()
 {
 	return is_open_;
