@@ -1,0 +1,33 @@
+
+
+
+
+
+
+
+
+
+
+
+message NodeParameter {
+    optional string name = 1; // the node name
+    optional string type = 2; // the node type
+    optional string dataset_root_path = 3; // kitti dataset root path
+    optional string frame_id = 5; // ros msgs frame_id
+    optional bool original_timestamp = 6;
+    optional string topic = 7;
+}
+
+message PlayerParameter {
+    optional string name = 1;
+    optional string dataset_root_path = 3; // kitti dataset root path
+    optional string frame_id = 5; // ros msgs frame_id
+    optional bool original_timestamp = 6;
+    optional double frequency = 7;
+	optional bool loop = 8 [default = true]; // loop process
+   
+    repeated NodeParameter node = 100;
+}
+
+
+

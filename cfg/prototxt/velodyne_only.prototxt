@@ -1,0 +1,11 @@
+name: "velodyne_only"
+dataset_root_path: "/work/picture/dataset/kitti/2011_09_26/2011_09_26_drive_0009_sync"
+frame_id: "odom"
+original_timestamp: true
+frequency: 0.1
+loop: false
+node {
+    name: "velodyne_node"
+    type: "Velodyne"
+    topic: "/velodyne_points"
+}
