@@ -8,7 +8,8 @@
 
 namespace kitti {
 
-Player::Player(const PlayerParameter& param)
+Player::Player(const PlayerParameter& param) 
+	:ros_node_("~")
 {
 	init(param);
 }

@@ -21,8 +21,8 @@ message NodeParameter {
     optional string name = 1; // the node name
     optional string type = 2; // the node type
     optional string dataset_root_path = 3; // kitti dataset root path
-    optional string subset_path = 8; // kitti subset path, like image_00
-    optional string suffix = 9; // kitti raw data suffix
+    optional string subset_path = 8; // kitti subset path, e.g. image_00
+    optional string suffix = 9; // kitti raw data suffix, e.g. .png .bin
     optional string frame_id = 5; // ros msgs frame_id
     optional bool original_timestamp = 6;
     optional string topic = 7;

@@ -49,3 +49,10 @@ node {
         encoding: "rgb8"
     }
 }
+node {
+    name: "imu"
+    type: "Imu"
+    subset_path: "oxts"
+    suffix: ".txt"
+    topic: "/imu"
+}
